@@ -1,8 +1,18 @@
 #include<iostream>
 using namespace std;
-#include "Node.cpp"
+
+class Node{
+	public :
+		int data ;
+		Node *next;
+		Node(int data){
+			this->data= data ;
+			next=NULL;
+		}
+};
 
 int main(){
+	
 	
 	//statically allocated
 	Node n1(1);
@@ -14,7 +24,7 @@ int main(){
 	
 	//dynamically
 	Node *n3= new Node(10);
-	Node *head=n3
+	Node *head=n3;
 	Node *n4= new Node(20);
 	n3->next=n4;
 	
@@ -22,14 +32,3 @@ int main(){
 	
 	
 }
-
-//code for Node.cpp
-class Node{
-	public :
-		int data ;
-		Node *next;
-		Node(int data){
-			this->data= data ;
-			next=NULL;
-		}
-};
